@@ -1,0 +1,39 @@
+{
+    "crypto": {
+        "key": "c682f92a2ba5c866b0ed444e023155e6",
+        "algo": "aes-256-cbc"
+    },
+    "jwt": {
+        "jwtKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJpYXQiOjE1NjIxNTU2MDN9.bNfuOiGhUyfIBx7Kg2UpvtFML9wQN962dnii32rGaJs"
+    },
+    "mailer": {
+        "host": "mail.ansitian.com",
+        "port": 8889,
+        "secure": false,
+        "auth": {
+            "user": "donotreply@ansitian.com",
+            "pass": "lndia@gr8"
+        }
+    },
+    "development": {
+        "username": "a10cbf_tpcohdb",
+        "password": "DBPassH0CPT",
+        "database": "db_a10cbf_tpcohdb",
+        "host": "mysql5017.site4now.net",
+        "dialect": "mysql"
+    },
+    "test": {
+        "username": "a10cbf_tpcohdb",
+        "password": "DBPassH0CPT",
+        "database": "db_a10cbf_tpcohdb",
+        "host": "mysql5017.site4now.net",
+        "dialect": "mysql"
+    },
+    "production": {
+        "username": "a10cbf_tpcohdb",
+        "password": "DBPassH0CPT",
+        "database": "db_a10cbf_tpcohdb",
+        "host": "mysql5017.site4now.net",
+        "dialect": "mysql"
+    }
+}

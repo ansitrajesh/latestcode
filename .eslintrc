@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base"
+  ],
+  "rules": {
+    "comma-dangle": "off",
+    "space-before-function-paren": "off",
+    "no-console": "off",
+    "camelcase": "error",
+    "no-obj-calls": "error",
+    "consistent-return": "off"
+  },
+  "env": {
+    "node": true
+  }
+}
