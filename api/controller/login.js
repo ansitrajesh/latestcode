@@ -19,6 +19,14 @@ router.post('/', (req, res) => {
         .then((newlogin) => res.json(BaseResponse.sendSuccess('New Login created Successfully')))
         .catch((error) => res.json(BaseResponse.sendError('Error while database Creating...!', error)));
 });
+
+router.get('/', (req, res) => {
+    loginSchema.find({}, (err, data) => {
+        console.log(data);
+        console.log(crypto.decrypt(data[0].hashPassword));
+    });
+});
+
 module.exports = router;
 
 
