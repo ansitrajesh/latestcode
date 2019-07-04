@@ -16,7 +16,16 @@ router.post('/', (req, res) => {
         .then(() => res.json(BaseResponse.sendSuccess('New Register Created Successfully')))
         .catch((error => res.json(BaseResponse.sendError('Database not created', error))));
 });
+
+router.get('/', (req, res) => {
+    registerSchema.find({}, (err, data) => {
+        console.log(data);
+    });
+});
+
 module.exports = router;
+
+
 // module.exports = function createRegister(req, res) {
 //     const registerSchema = new registerSchema({
 //         _id: mongoose.Types.ObjectId(),
