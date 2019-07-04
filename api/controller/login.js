@@ -31,7 +31,7 @@ router.post('/login', (req, res) => {
             return res.json(BaseResponse.sendError('Invalid Email....!'));
         }
         if (password === crypto.decrypt(data[0].hashPassword)) {
-            const { _id, email: uEmail, role } = data;
+            const { _id, email: uEmail, role } = data[0];
             jwt.sign(
                 { _id, email: uEmail, role },
                 config.jwt.jwtKey,
