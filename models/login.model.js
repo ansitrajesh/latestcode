@@ -7,6 +7,7 @@ let LoginSchema = new Schema({
     name: { type: String, max: 100 },
     hashPassword: { type: String, max: 255 },
     phone: { type: Number },
-    address: { type: String, max: 255 }
+    address: { type: String, max: 255 },
+    role: { type: String, max: 255 }
 });
 module.exports = mongoose.model('login', LoginSchema);
