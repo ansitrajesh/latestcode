@@ -7,18 +7,26 @@ const api = require('./api/index');
 const BaseResponse = require('./utils/response');
 const config = require('./config/config.json');
 const app = express();
-const LoginSchema = require('./models/login.model');
 
-let dev_db_url = 'mongodb+srv://rajesh:12345@cluster0-zz3uu.mongodb.net/test?retryWrites=true&w=majority';
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
-mongoose.connect('mongodb+srv://rajesh:12345@cluster0-zz3uu.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true });
-mongoose.Promise = global.Promise;
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-const myModel = mongoose.model('login', ' LoginSchema');
-const m = new myModel;
-m.save();
-// Database Connection
+// Database Connection Start
+// let dev_db_url = 'mongodb+srv://rajesh:12345@cluster0-zz3uu.mongodb.net/test?retryWrites=true&w=majority';
+// const mongoDB = process.env.MONGODB_URI || dev_db_url;
+// mongoose.connect('mongodb+srv://rajesh:12345@cluster0-zz3uu.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true });
+// mongoose.Promise = global.Promise;
+// const db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+// const modelLogin = mongoose.model('login', 'LoginSchema');
+// const m = new modelLogin;
+// m.save();
+// const modelRegister = mongoose.model('Register', 'RegisterSchema');
+// const n = new modelRegister;
+// n.save();
+
+mongoose.connect('mongodb+srv://rajesh:12345@cluster0-zz3uu.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true })
+  .then(() => console.log('Databse Connected'))
+  .catch((error) => console.log('Error', error));
+
+// Database Connection End
 
 
 // configure the app

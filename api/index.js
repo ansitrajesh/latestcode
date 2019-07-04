@@ -1,8 +1,10 @@
 const router = require('express').Router();
-const admin = require('./controller/admin.controller');
+const login = require('./controller/login');
+const register = require('./controller/register');
 const BaseResponse = require('../utils/response');
 
-router.use('/admin', admin);
+router.use('/login', login);
+router.use('/register', register);
 
 router.get('/', (req, res) => res.json(BaseResponse.sendSuccess('Api is running..!')));
 
